@@ -1,7 +1,6 @@
 * text=auto
 Assets/TextMesh?Pro/* linguist-vendored
-
-Assets/TextMesh?Pro/* linguist-vendored
+Assets/TextMesh?Pro/Shaders/* linguist-vendored
 
 # Unity files
 *.meta -text merge=unityyamlmerge diff
