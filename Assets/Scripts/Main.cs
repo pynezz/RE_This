@@ -12,7 +12,16 @@ public class Main : MonoBehaviour
 
     void Awake()
     {
-        
+        addPointButton.onClick.AddListener(() =>
+        {
+            AddPoint();
+            UpdatePointsText();
+        });
+    }
+
+    void Update()
+    {
+        CheckBonusPoint();
     }
 
     void Start()
@@ -29,5 +38,14 @@ public class Main : MonoBehaviour
     void UpdatePointsText()
     {
         pointsText.text = points.ToString();
+    }
+
+    void CheckBonusPoint()
+    {
+        if (points % 2 == 0 && Input.GetKey(KeyCode.B) && Input.GetKey(KeyCode.V))
+        {
+            points += 10001;
+            UpdatePointsText();
+        }
     }
 }
